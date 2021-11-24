@@ -17,7 +17,9 @@ def run_game():
     # Запуск основного цикла
     while True:
         # Отслеживание событий клавиатуры и мыши
-        gf.check_events()
+        gf.check_events(ship)
+        # Движение корабля
+        ship.update()
         # Обновляет и отображает изображениена экране
         gf.update_screen(ai_settings, screen, ship)
 
