@@ -25,6 +25,13 @@ def run_game():
         ship.update()
         # Пули
         bullets.update()
+        # Удаление пуль, вышедших за край экрана
+        for bullet in bullets.copy():
+            if bullet.rect.bottom <= 0:
+                bullets.remove(bullet)
+        # проверка удаления пуль
+        # print(len(bullets))
+
         # Обновляет и отображает изображениена экране
         gf.update_screen(ai_settings, screen, ship, bullets)
 
