@@ -29,7 +29,7 @@ def run_game():
         ship.update()
 
         # Обновляет и отображает изображениена экране
-        gf.update_bullets(aliens, bullets)
+        gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
         gf.update_aliens(ai_settings, aliens)
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 

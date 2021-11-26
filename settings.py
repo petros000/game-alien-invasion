@@ -12,8 +12,8 @@ class Settings():
         self.ship_speed_factor = 1
 
         # Парметры пули
-        self.bullet_speed_factor = 1
-        self.bullets_allowed = 3
+        self.bullet_speed_factor = 3
+        self.bullets_allowed = 5
 
         # Настройки пришельцев
         self.alien_speed_factor = 1
