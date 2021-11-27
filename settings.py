@@ -10,6 +10,7 @@ class Settings():
 
         # Настройки корабля
         self.ship_speed_factor = 1
+        self.ship_limit = 3
 
         # Парметры пули
         self.bullet_speed_factor = 3
