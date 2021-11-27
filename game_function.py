@@ -126,12 +126,14 @@ def create_fleet(ai_settings, screen, ship, aliens):
                          row_number)
 
 
-def update_aliens(ai_settings, aliens):
+def update_aliens(ai_settings, ship, aliens):
     """Проверяет, достиг ли флот края экрана,
     после чего обновляет позиции всех пришельцев во флоте"""
     check_fleet_edges(ai_settings, aliens)
     aliens.update()
-
+    # Проверка коллизий "пришелец-корабль"
+    if pygame.sprite.spritecollideany(ship, aliens):
+        print("Ship")
 
 def check_fleet_edges(ai_settings, aliens):
     """Реагирует на достижение пришельцами края экрана"""
